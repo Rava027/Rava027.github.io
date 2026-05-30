@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pagina di accesso all'area riservata.">
+    <title>Accesso Area Riservata</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Accesso Area Riservata</h1>
+            <p>Esegui l'acesso per poter chattare con altri cestiti esperti</p>
+        </div>
+    </header>
+    <main>
+        <div class="login-container">
+            <h2>Accedi</h2>
+            <form action="Chat.html" method="POST">
+                <div class="form-group">
+                    <label for="username">Nome utente</label>
+                    <input type="text" id="username" name="username" placeholder="Inserisci il tuo nome utente" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Inserisci la tua password" required>
+                </div>
+                <button type="submit" class="login-button">Accedi</button>
+            </form>
+            <p class="signup-link">Non hai un account? <a href="registrazione.html">Registrati</a></p>
+        </div>
+        <div class="back-to-home">
+            <button onclick="location.href='pagina 1.html'">🏠 Torna alla Home</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 La Storia del Basket</p>
+    </footer>
+</body>
+</html>

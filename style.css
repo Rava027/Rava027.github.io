@@ -1,0 +1,702 @@
+/* Imposta il corpo della pagina per evitare lo scorrimento laterale */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #111827; /* Blu notte */
+    color: #e5e7eb; /* Grigio chiaro */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    overflow-x: hidden; /* Nasconde lo scorrimento laterale */
+}
+
+/* Header */
+header {
+    background-color: #ee660b; /* Arancione vivace */
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    position: relative; /* Per posizionare l'area riservata */
+}
+
+header h1 {
+    color: #ffffff; /* Testo bianco */
+    font-size: 2.5em;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombra per il testo */
+}
+
+header p {
+    color: #ffffff;
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+/* Area riservata */
+.nav-box.area {
+    position: absolute;
+    top: 150px; /* Posizionato appena sotto il titolo */
+    right: 20px; /* Allineato a destra */
+    width: auto; /* Larghezza adattabile al contenuto */
+    height: 40px; /* Altezza fissa */
+    display: flex;
+    align-items: center; /* Centra il contenuto verticalmente */
+    justify-content: center; /* Centra il contenuto orizzontalmente */
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 20px; /* Bordo arrotondato */
+    background-color: #ee660b; /* Colore arancione accento */
+    color: #ffffff; /* Testo bianco */
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3); /* Ombra */
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s;
+    padding: 0 15px; /* Spaziatura interna */
+    gap: 5px; /* Spaziatura tra l'icona e il testo */
+    cursor: pointer;
+}
+
+.nav-box.area img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Effetti hover per l'area riservata */
+.nav-box.area:hover {
+    transform: translateY(-3px); /* Solleva leggermente al passaggio del mouse */
+    background-color: #f4953c; /* Cambia colore al passaggio del mouse */
+    box-shadow: 0 6px 18px rgba(59, 130, 246, 0.4); /* Ombra più pronunciata */
+}
+
+.nav-box.area span {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Spaziatura tra l'icona e il testo */
+}
+
+
+/* Container nav */
+.nav-container {
+    display: flex;
+    justify-content: center; /* Centra i riquadri */
+    gap: 20px; /* Spaziatura tra i riquadri */
+    flex-wrap: wrap; /* Permette di adattarsi su schermi più piccoli */
+}
+
+/* Stile rettangoli navigazione */
+.nav-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 220px;
+    height: 300px;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 500;
+    border-radius: 12px;
+    background-color: #ee660b; /* Colore arancione */
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s;
+    padding: 10px;
+    gap: 10px;
+}
+
+.nav-box img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Effetti hover per i riquadri centrali */
+.nav-box:hover {
+    transform: translateY(-5px);
+    background-color: #f4953c;
+    box-shadow: 0 6px 18px rgba(59, 130, 246, 0.4);
+}
+
+/* Footer */
+footer {
+    margin-top: 50px;
+    font-size: 0.9em;
+    color: #6b7280;
+    text-align: center;
+    padding: 10px;
+    background-color: #1f2937; /* Sfondo scuro */
+    width: 100%;
+}
+
+/* Stile per la lista delle curiosità */
+.origini ul {
+    list-style: none; /* Rimuove i punti elenco predefiniti */
+    padding: 0;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.origini ul li {
+    display: flex;
+    align-items: flex-start;
+    background-color: #1f2937; /* Sfondo scuro per contrasto */
+    color: #e5e7eb; /* Testo chiaro */
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.origini ul li:hover{
+    transform: translateY(-5px); /* Solleva l'elemento al passaggio del mouse */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ombra più pronunciata */
+}
+
+.origini ul li::before {
+    content: "★"; /* Aggiunge un'icona prima di ogni elemento */
+    color: #fbbf24; /* Colore giallo per l'icona */
+    font-size: 1.5rem;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.origini ul li strong {
+    color: #f4953c; /* Colore accento per il testo in grassetto */
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.origini ul li p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.introduzione-origini {
+    background-color: #1f2937; /* Sfondo scuro */
+    color: #e5e7eb; /* Testo chiaro */
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Ombra */
+    max-width: 1200px;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid #f4953c; /* Colore accento */
+    margin: 20px 0;
+    width: 100%; /* Larghezza completa */
+}
+
+/* Footer */
+footer {
+    margin-top: 50px;
+    font-size: 0.9em;
+    color: #6b7280;
+    text-align: center;
+    padding: 10px;
+    background-color: #1f2937; /* Sfondo scuro */
+    width: 100%;
+}
+
+footer a {
+    color: #f4953c; /* Colore accento */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.introduzione-evoluzione {
+    background-color: #1f2937; /* Sfondo scuro */
+    color: #e5e7eb; /* Testo chiaro */
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Ombra */
+    max-width: 1200px;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+/* Sezione principale */
+main h2 {
+    color: #f4953c; /* Colore accento */
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.evoluzione ul {
+    list-style: none; /* Rimuove i punti elenco */
+    padding: 0;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.evoluzione ul li {
+    background-color: #1f2937; /* Sfondo scuro */
+    color: #e5e7eb; /* Testo chiaro */
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Ombra */
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.evoluzione ul li:hover {
+    transform: translateY(-5px); /* Solleva l'elemento al passaggio del mouse */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ombra più pronunciata */
+}
+
+.evoluzione ul li::before {
+    content: "🏀"; /* Icona del basket */
+    font-size: 1.5rem;
+    color: #fbbf24; /* Colore giallo */
+    flex-shrink: 0;
+}
+
+.evoluzione ul li strong {
+    color: #f4953c; /* Colore accento */
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+/* Contenitore del login */
+.login-container {
+    background-color: #1f2937; /* Sfondo scuro */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Ombra */
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-container h2 {
+    color: #f4953c; /* Colore accento */
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #6b7280; /* Grigio scuro */
+    border-radius: 8px;
+    background-color: #374151; /* Grigio scuro */
+    color: #e5e7eb; /* Testo chiaro */
+    font-size: 1em;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #f4953c; /* Colore accento */
+    box-shadow: 0 0 5px rgba(244, 149, 60, 0.5);
+}
+
+.login-button {
+    background-color: #f4953c; /* Colore accento */
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #ee660b; /* Colore hover */
+}
+
+.signup-link {
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+.signup-link a {
+    color: #f4953c; /* Colore accento */
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* Stile della chat */
+#chat-box {
+    height: 300px; /* Altezza maggiore per più messaggi */
+    overflow-y: auto; /* Scorrimento verticale */
+    background: #1f2937; /* Sfondo scuro */
+    padding: 15px;
+    border: 1px solid #374151; /* Bordo grigio scuro */
+    border-radius: 10px; /* Bordo arrotondato */
+    margin-bottom: 20px;
+    color: #e5e7eb; /* Testo chiaro */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Ombra */
+}
+
+.message {
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #374151; /* Sfondo grigio scuro */
+    border-radius: 8px; /* Bordo arrotondato */
+    border: 1px solid #4b5563; /* Bordo più chiaro */
+    color: #e5e7eb; /* Testo chiaro */
+    font-size: 0.9em;
+    line-height: 1.5;
+    word-wrap: break-word; /* Gestisce messaggi lunghi */
+}
+
+.message-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Spaziatura tra input e pulsante */
+}
+
+.message-box input {
+    padding: 10px;
+    width: 100%;
+    max-width: 500px; /* Larghezza massima */
+    border: 1px solid #6b7280; /* Bordo grigio scuro */
+    border-radius: 8px; /* Bordo arrotondato */
+    background-color: #1f2937; /* Sfondo scuro */
+    color: #e5e7eb; /* Testo chiaro */
+    font-size: 1em;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2); /* Effetto interno */
+}
+
+.message-box input::placeholder {
+    color: #9ca3af; /* Colore del placeholder */
+}
+
+.message-box input:focus {
+    outline: none;
+    border-color: #f4953c; /* Colore accento */
+    box-shadow: 0 0 5px rgba(244, 149, 60, 0.5); /* Effetto focus */
+}
+
+.message-box button {
+    padding: 10px 20px;
+    background: #f4953c; /* Colore accento */
+    color: white;
+    border: none;
+    border-radius: 8px; /* Bordo arrotondato */
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Ombra */
+}
+
+.message-box button:hover {
+    background: #ee660b; /* Colore hover */
+    transform: translateY(-2px); /* Solleva leggermente */
+}
+
+.message-box button:active {
+    transform: translateY(0); /* Effetto clic */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Ombra ridotta */
+}
+
+/* Titolo della chat */
+.chat-title {
+    font-size: 1.8em;
+    color: #f4953c; /* Colore accento */
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Spaziatura tra icona e testo */
+}
+
+.chat-title i {
+    font-size: 1.5em;
+    color: #fbbf24; /* Colore giallo */
+}
+
+.back-to-home {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; /* Centra il pulsante orizzontalmente */
+    align-items: center; /* Centra il contenuto verticalmente */
+    width: 100%; /* Assicura che il contenitore occupi tutta la larghezza */
+}
+
+.back-to-home button {
+    background-color: #e5e7eb; /* Grigio chiaro */
+    color: #111827; /* Testo scuro */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px; /* Bordo arrotondato */
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Ombra leggera */
+}
+
+.back-to-home button:hover {
+    background-color: #d1d5db; /* Grigio più chiaro al passaggio del mouse */
+    transform: translateY(-2px); /* Solleva leggermente */
+}
+
+.back-to-home button:active {
+    transform: translateY(0); /* Effetto clic */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Ombra ridotta */
+}
+
+/* Contenitore della registrazione */
+.registration-container {
+    background-color: #1f2937; /* Sfondo scuro */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Ombra */
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.registration-container h2 {
+    color: #f4953c; /* Colore accento */
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #e5e7eb; /* Testo chiaro */
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #6b7280; /* Bordo grigio scuro */
+    border-radius: 8px;
+    background-color: #374151; /* Sfondo grigio scuro */
+    color: #e5e7eb; /* Testo chiaro */
+    font-size: 1em;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #f4953c; /* Colore accento */
+    box-shadow: 0 0 5px rgba(244, 149, 60, 0.5);
+}
+
+.register-button {
+    background-color: #f4953c; /* Colore accento */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.register-button:hover {
+    background-color: #ee660b; /* Colore hover */
+}
+
+.login-link {
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+.login-link a {
+    color: #f4953c; /* Colore accento */
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+.header-container {
+    margin-bottom: 10px; /* Spazio tra il titolo e il contenuto */
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra orizzontalmente */
+    justify-content: center; /* Centra verticalmente */
+    min-height: 100vh; /* Occupa l'intera altezza della finestra */
+    padding: 0 20px;
+    box-sizing: border-box; /* Assicura che padding non influisca sulla larghezza */
+}
+
+main p {
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Ombra */
+    color: #e5e7eb; /* Testo chiaro */
+    margin-bottom: 20px;
+}
+
+/* Contenitore dei personaggi */
+.personaggi-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Layout responsivo */
+    gap: 20px; /* Spaziatura tra i riquadri */
+    padding: 20px;
+}
+
+/* Stile per ogni personaggio */
+/* Contenitore dei personaggi */
+.personaggi-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Layout responsivo */
+    gap: 30px; /* Spaziatura tra i riquadri */
+    padding: 40px; /* Spaziatura interna */
+    max-width: 1200px; /* Larghezza massima del contenitore */
+    margin: 0 auto; /* Centra il contenitore nella pagina */
+}
+
+/* Stile per ogni personaggio */
+.personaggio {
+    background-color: #1f2937; /* Sfondo scuro */
+    border-radius: 12px; /* Bordo arrotondato */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Ombra */
+    text-align: center;
+    padding: 20px;
+    color: #e5e7eb; /* Testo chiaro */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.personaggio img {
+    width: 100%;
+    height: auto;
+    max-width: 200px; /* Larghezza massima uniforme */
+    max-height: 200px; /* Altezza massima uniforme */
+    border-radius: 8px; /* Bordo arrotondato per le immagini */
+    margin: 0 auto 15px auto; /* Centra l'immagine e aggiunge margine inferiore */
+    display: block; /* Assicura che l'immagine sia trattata come un blocco */
+    object-fit: cover; /* Adatta l'immagine mantenendo il rapporto d'aspetto */
+}
+
+
+.personaggio h3 {
+    color: #f4953c; /* Colore accento */
+    margin-bottom: 10px;
+    font-size: 1.2em; /* Dimensione del testo */
+}
+
+.personaggio p {
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+.personaggio:hover {
+    transform: translateY(-5px); /* Solleva il riquadro al passaggio del mouse */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4); /* Ombra più pronunciata */
+}
+
+.origini ul a {
+    text-decoration: none; /* Rimuove la sottolineatura */
+    color: inherit; /* Mantiene il colore del testo ereditato */
+}
+
+/* Stile generale per le pagine sub-origini */
+.sub-origini-header {
+    background-color: #ee660b; /* Sfondo arancione */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Ombra */
+}
+
+.sub-origini-title {
+    color: #ffffff; /* Testo bianco */
+    font-size: 2.5em;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombra per il testo */
+}
+
+.sub-origini-main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+.sub-origini-section {
+    margin-bottom: 30px;
+}
+
+.sub-origini-text {
+    background-color: #1f2937; /* Sfondo scuro */
+    color: #e5e7eb; /* Testo chiaro */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Ombra */
+    margin-bottom: 20px;
+}
+
+.sub-origini-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.sub-origini-link a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ee660b; /* Colore accento */
+    color: #ffffff; /* Testo bianco */
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Ombra */
+}
+
+.sub-origini-link a:hover {
+    background-color: #f4953c; /* Colore hover */
+    transform: translateY(-3px); /* Solleva leggermente */
+}
+
+.sub-origini-link a:active {
+    transform: translateY(0); /* Effetto clic */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Ombra ridotta */
+}
+
+/* Stile per le immagini nelle pagine sub-origini */
+.sub-origini-image {
+    width: 100%; /* L'immagine occupa tutta la larghezza disponibile */
+    max-width: 600px; /* Larghezza massima per uniformare le immagini */
+    height: auto; /* Mantiene il rapporto d'aspetto */
+    margin: 10px auto; /* Riduce il margine sopra e sotto */
+    border-radius: 8px; /* Bordo arrotondato per un design moderno */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Ombra per evidenziare l'immagine */
+    display: block; /* Assicura che l'immagine sia trattata come un blocco */
+    object-fit: cover; /* Adatta l'immagine al contenitore mantenendo il rapporto d'aspetto */
+}
